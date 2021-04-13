@@ -1,7 +1,8 @@
 package fr.sbelhadj.soccerapp.presentation.list
 
-data class Competition(
+data class Area(
         val id : Int,
         val name : String,
-        val area : Area,
+        val countryCode : String,
+        val ensignUrl : String
 )

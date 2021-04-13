@@ -36,11 +36,11 @@ class CompetitionListFragment : Fragment() {
             adapter = this@CompetitionListFragment.adapter
         }
 
-        val competitionList = arrayListOf<String>().apply {
-            add("Ligue 2")
-            add("Ligue 1")
-            add("Liga Satanden")
-            add("Premier League")
+        val competitionList = arrayListOf<Competition>().apply {
+            add(Competition("Ligue 2"))
+            add(Competition("Ligue 1"))
+            add(Competition("Liga Satanden"))
+            add(Competition("Premier League"))
         }
 
         adapter.updateList(competitionList)

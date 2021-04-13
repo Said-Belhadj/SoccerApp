@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import fr.sbelhadj.soccerapp.R
 
-class CompetitionAdapter(private var dataSet: List<Any>) :
+class CompetitionAdapter(private var dataSet: List<Competition>) :
         RecyclerView.Adapter<CompetitionAdapter.ViewHolder>() {
 
     /**
@@ -24,7 +24,7 @@ class CompetitionAdapter(private var dataSet: List<Any>) :
         }
     }
 
-    fun updateList(list: List<String>){
+    fun updateList(list: List<Competition>){
         dataSet = list
         notifyDataSetChanged()
     }
@@ -43,7 +43,8 @@ class CompetitionAdapter(private var dataSet: List<Any>) :
 
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
-        viewHolder.textView.text = dataSet[position].toString()
+        val competition = dataSet[position]
+        viewHolder.textView.text = competition.name
     }
 
     // Return the size of your dataset (invoked by the layout manager)

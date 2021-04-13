@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="fr.sbelhadj.soccerapp.FirstFragment"
+        android:name="fr.sbelhadj.soccerapp.presentation.list.CompetitionListFragment"
         android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        tools:layout="@layout/fragment_competition_list">
 
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"

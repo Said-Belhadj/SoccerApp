@@ -7,15 +7,15 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import fr.sbelhadj.soccerapp.R
 
-class CompetitionAdapter(private var dataSet: List<Competition>) :
+class CompetitionAdapter(private var dataSet: List<Competition>, var listener: ((Competition) -> Unit)? = null) :
         RecyclerView.Adapter<CompetitionAdapter.ViewHolder>() {
+
 
     /**
      * Provide a reference to the type of views that you are using
      * (custom ViewHolder).
      */
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
         val textView: TextView
 
         init {
@@ -45,6 +45,9 @@ class CompetitionAdapter(private var dataSet: List<Competition>) :
         // contents of the view with that element
         val competition = dataSet[position]
         viewHolder.textView.text = competition.name
+        viewHolder.itemView.setOnClickListener {
+            listener?.invoke(competition)
+        }
     }
 
     // Return the size of your dataset (invoked by the layout manager)

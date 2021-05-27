@@ -1,4 +1,4 @@
-package fr.sbelhadj.soccerapp.presentation.detail
+package fr.sbelhadj.animeapp.presentation.detail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import fr.sbelhadj.soccerapp.R
-import fr.sbelhadj.soccerapp.presentation.Singletons
-import fr.sbelhadj.soccerapp.presentation.api.AnimeDetailResponse
+import fr.sbelhadj.animeapp.presentation.Singletons
+import fr.sbelhadj.animeapp.presentation.api.AnimeDetailResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

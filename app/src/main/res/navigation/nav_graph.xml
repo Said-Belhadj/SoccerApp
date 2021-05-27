@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="fr.sbelhadj.soccerapp.presentation.list.AnimeListFragment"
+        android:name="fr.sbelhadj.animeapp.presentation.list.AnimeListFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_competition_list">
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="fr.sbelhadj.soccerapp.presentation.detail.AnimeDetailFragment"
+        android:name="fr.sbelhadj.animeapp.presentation.detail.AnimeDetailFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_competition_detail">
 

@@ -1,4 +1,4 @@
-package fr.sbelhadj.soccerapp.presentation.list
+package fr.sbelhadj.animeapp.presentation.list
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,8 +9,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import fr.sbelhadj.soccerapp.R
-import fr.sbelhadj.soccerapp.presentation.Singletons
-import fr.sbelhadj.soccerapp.presentation.api.AnimeResponse
+import fr.sbelhadj.animeapp.presentation.Singletons
+import fr.sbelhadj.animeapp.presentation.api.AnimeResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -22,7 +22,11 @@ import retrofit2.Response
 class AnimeListFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView;
-    private val adapter = CompetitionAdapter(listOf(), ::onClickedCompetition)
+    private val adapter =
+        CompetitionAdapter(
+            listOf(),
+            ::onClickedCompetition
+        )
 
     private val  layoutManager = LinearLayoutManager(context)
 
@@ -51,8 +55,8 @@ class AnimeListFragment : Fragment() {
             }
 
             override fun onResponse(
-                    call: Call<AnimeResponse>,
-                    response: Response<AnimeResponse>
+                call: Call<AnimeResponse>,
+                response: Response<AnimeResponse>
             ) {
                 if(response.isSuccessful && response.body()!= null){
                     val AnimeResponse = response.body()!!

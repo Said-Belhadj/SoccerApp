@@ -1,4 +1,4 @@
-package fr.sbelhadj.soccerapp.presentation.list
+package fr.sbelhadj.animeapp.presentation.list
 
 import android.view.LayoutInflater
 import android.view.View
@@ -35,7 +35,9 @@ class CompetitionAdapter(private var dataSet: List<Anime>, var listener: ((Anime
         val view = LayoutInflater.from(viewGroup.context)
                 .inflate(R.layout.competition_item, viewGroup, false)
 
-        return ViewHolder(view)
+        return ViewHolder(
+            view
+        )
     }
 
     // Replace the contents of a view (invoked by the layout manager)

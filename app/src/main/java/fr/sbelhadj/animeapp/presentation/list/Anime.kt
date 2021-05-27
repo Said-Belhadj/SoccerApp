@@ -1,4 +1,4 @@
-package fr.sbelhadj.soccerapp.presentation.list
+package fr.sbelhadj.animeapp.presentation.list
 
 data class Anime(
         val id : Int,

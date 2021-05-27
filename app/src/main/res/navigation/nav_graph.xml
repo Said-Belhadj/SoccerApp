@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="fr.sbelhadj.soccerapp.presentation.list.CompetitionListFragment"
+        android:name="fr.sbelhadj.soccerapp.presentation.list.AnimeListFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_competition_list">
 
         <action
-            android:id="@+id/navigateToCompetitionListMatchFragment"
+            android:id="@+id/navigateToAnimeDetailFragment"
             app:destination="@id/SecondFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="fr.sbelhadj.soccerapp.SecondFragment"
+        android:name="fr.sbelhadj.soccerapp.presentation.detail.AnimeDetailFragment"
         android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        tools:layout="@layout/fragment_competition_detail">
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
